@@ -1,0 +1,12 @@
+﻿<div>
+    Search for: <input type="text" ng-model="searchTerm" />
+    Type: <select ng-model="mediaType">
+        <option value="all" selected>All</option>
+        <option value="musicVideo" selected>Video</option>
+        <option value="movie">Movie</option>
+        <option value="musicTrack">Music</option>
+        <option value="podcast">Podcast</option>
+        <option value="tvShow">TV Show</option>
+    </select>
+    <button ng-click="doSearch()">Search</button>
+</div>

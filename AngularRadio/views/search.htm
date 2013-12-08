@@ -1,0 +1,29 @@
+﻿<h3>
+    Search: {{searchTerm}}
+</h3>
+
+<div>
+    <br/>
+
+    <label>
+        Sort by
+        <select ng-model="sortProp">
+            <option value="artistName">Artist</option>
+            <option value="collectionName">Album</option>
+            <option value="trackPrice">Song Price</option>
+            <option value="collectionPrice">Album Price</option>
+            <option value="releaseDate">Date</option>
+        </select>
+    </label>
+    <label>
+        Filter by
+        <input type="text" ng-model="filterTerm" />
+    </label>
+
+</div>
+
+<ul>
+    <li ng-repeat="item in mediaResults | filter:filterTerm | orderBy:sortProp">
+        <div song="item" />
+    </li>
+</ul>

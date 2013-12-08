@@ -1,0 +1,22 @@
+﻿<table>
+    <tr>
+        <td>
+            <a ng-click="playSong(song)"><img ng-src="{{song.artworkUrl60}}" /></a>
+        </td>
+        <td>
+            <table>
+                <tr>
+                    <td>
+                        {{(song.trackName != null) && song.trackName || song.collectionName}} ({{song.trackTimeMillis|formatTrackLength}}) by <a href="/artist/{{song.artistId}}">{{song.artistName}}</a>
+                        <br />
+                        {{song.collectionName}}, released on {{song.releaseDate | date: "d MMM yyyy"}},
+                        <a href="{{song.trackViewUrl}}" target="_blank">buy for {{song.trackPrice|currency:'$'}}</a> or
+                        <a href="{{song.collectionViewUrl}}" target="_blank">buy album for {{song.collectionPrice|currency:'$'}}</a>
+                        <br />
+                        <a ng-click="makeFavorite(song)"><img ng-src="{{song.isFavorite && '/images/starred.png' || '/images/star.png' }}" /></a>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>

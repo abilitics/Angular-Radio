@@ -1,0 +1,23 @@
+﻿<h3>
+    Artist: {{artist.artistName}}
+</h3>
+
+<ul>
+    <li ng-repeat="album in albums">
+        <table>
+            <tr>
+                <td>
+                    <a href="/album/{{album.collectionId}}"><img src="{{album.artworkUrl100}}" /></a>
+                </td>
+                <td>
+                    <a href="/album/{{album.collectionId}}">{{album.collectionName}}</a> by {{album.artistName}}
+                    <br />
+                    {{album.trackCount}} songs, 
+                    <a href="{{album.collectionViewUrl}}" target="_blank">buy for {{album.collectionPrice|currency}}</a>
+                    <br/>
+                    {{album.country}}, released on {{album.releaseDate| date: "d MMM yyyy"}}, genre {{album.primaryGenreName}}
+                </td>
+            </tr>
+        </table>
+    </li>
+</ul>

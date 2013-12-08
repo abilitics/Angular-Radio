@@ -1,0 +1,47 @@
+body {
+    font-family: arial,sans-serif;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+    a:hover {
+        cursor: pointer;
+    }
+
+    a:active, a:visited {
+        color:blue;
+    }
+
+.left {
+    width: 176px;
+    margin-left: 15px;
+    height: 600px;
+    margin-right: 40px;
+    float: left;
+    position: relative;
+}
+
+.right {
+    width: 80%;
+    float: left;
+}
+
+.menu {
+    margin-top: 60px;
+}
+
+.player {
+    position: fixed;
+    margin-left: 260px;
+    bottom: 0px;
+    width: 100%;
+}
